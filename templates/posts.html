@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{%block title%}
+    Сторінка про нас!
+{% endblock%}
+
+{%block body%}
+<div class="container card mt-3 p-3">
+    {% if articles|length > 0 %}
+        {% for article in articles %}
+            <div class="alert alert-info">
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.intro }}</p>
+                <small>{{ article.date }}</small>
+                <br>
+                <a href="/posts/{{article.id}}" class="btn btn-warning">Докладніше</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Поки що постів немає.</p>
+    {% endif %}
+</div>
+{% endblock%}

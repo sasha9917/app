@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{%block title%}
+    Додавання статті
+{% endblock%}
+
+{%block body%}
+<div class="container mt-5">
+    <h1>Редагуємо статтю</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{article.title}}" placeholder="Введіть назву">
+        <textarea name="intro" id="intro" class="form-control" placeholder="Введіть тему">{{article.intro}}</textarea>
+        <textarea name="text" id="text" class="form-control" placeholder="Введіть основний текс">{{article.text}}</textarea>
+        <input type="submit" class="btn btn-success" value="Обновити">
+    </form>
+</div>
+{% endblock%}

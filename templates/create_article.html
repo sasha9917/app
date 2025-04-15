@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{%block title%}
+    Привіт друже! Вітаю тебе
+{% endblock%}
+
+{%block body%}
+<div class="container mt-5">
+    <h1>Додаємо статтю</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Введіть назву">
+        <textarea name="intro" id="intro" class="form-control" placeholder="Введіть тему"></textarea>
+        <textarea name="text" id="text" class="form-control" placeholder="Введіть основний текс"></textarea>
+        <input type="submit" class="btn btn-success" value="Відправити">
+    </form>
+</div>
+{% endblock%}
